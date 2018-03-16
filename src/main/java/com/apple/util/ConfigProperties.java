@@ -31,7 +31,7 @@ public class ConfigProperties {
 	static {
 
 		Properties propertiesObj = new Properties();
-		String path = System.getProperty("user.dir")+"\\src\\main\\java\\com\\apple\\config\\config.properties";
+		String path = System.getProperty("user.dir")+"/src/main/java/com/apple/config/config.properties";
 		System.out.println("Properties file path ..." + path);
 
 		try {

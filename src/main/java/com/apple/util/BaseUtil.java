@@ -81,17 +81,17 @@ public class BaseUtil extends ConfigProperties {
 		case 1:
 			System.out.println("Opening firefox driver");
 			capability = DesiredCapabilities.firefox();
-			capability.setPlatform(Platform.WINDOWS);
+			capability.setPlatform(Platform.MAC);
 			return capability;
 		case 3:
 			System.out.println("Opening chrome driver");
 			capability = DesiredCapabilities.chrome();
-			capability.setPlatform(Platform.WINDOWS);
+			capability.setPlatform(Platform.MAC);
 			return capability;
 		case 2:
 			System.out.println("Opening IE driver");
 			capability = DesiredCapabilities.internetExplorer();
-			capability.setPlatform(Platform.WINDOWS);
+			capability.setPlatform(Platform.MAC);
 			capability.setCapability("ignoreZoomSetting", true);
 			capability.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 			return capability;

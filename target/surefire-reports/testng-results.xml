@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="57559" started-at="2018-03-16T16:36:32Z" finished-at="2018-03-16T16:37:30Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="57559" started-at="2018-03-16T16:36:32Z" finished-at="2018-03-16T16:37:30Z">
+      <class name="com.apple.testcases.HomePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.apple.testcases.HomePageTest@b97c004]" name="setUp" is-config="true" duration-ms="15301" started-at="2018-03-16T22:06:32Z" finished-at="2018-03-16T22:06:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="homePageTitleTest()[pri:1, instance:com.apple.testcases.HomePageTest@b97c004]" name="homePageTitleTest" duration-ms="20" started-at="2018-03-16T22:06:47Z" finished-at="2018-03-16T22:06:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageTitleTest -->
+        <test-method status="PASS" signature="clickOnBagIconTest()[pri:2, instance:com.apple.testcases.HomePageTest@b97c004]" name="clickOnBagIconTest" duration-ms="155" started-at="2018-03-16T22:06:58Z" finished-at="2018-03-16T22:06:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnBagIconTest -->
+        <test-method status="PASS" signature="clickOnSignInLinkTest()[pri:3, instance:com.apple.testcases.HomePageTest@b97c004]" name="clickOnSignInLinkTest" duration-ms="2258" started-at="2018-03-16T22:07:27Z" finished-at="2018-03-16T22:07:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickOnSignInLinkTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.apple.testcases.HomePageTest@b97c004]" name="tearDown" is-config="true" duration-ms="1" started-at="2018-03-16T22:07:30Z" finished-at="2018-03-16T22:07:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.apple.testcases.HomePageTest -->
+      <class name="com.apple.testcases.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.apple.testcases.LoginPageTest@4590c9c3]" name="setUp" is-config="true" duration-ms="10238" started-at="2018-03-16T22:06:47Z" finished-at="2018-03-16T22:06:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginPageTitleTest()[pri:1, instance:com.apple.testcases.LoginPageTest@4590c9c3]" name="loginPageTitleTest" duration-ms="13" started-at="2018-03-16T22:06:58Z" finished-at="2018-03-16T22:06:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPageTitleTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.apple.testcases.LoginPageTest@4590c9c3]" name="tearDown" is-config="true" duration-ms="124" started-at="2018-03-16T22:06:58Z" finished-at="2018-03-16T22:06:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.apple.testcases.LoginPageTest@4590c9c3]" name="setUp" is-config="true" duration-ms="8685" started-at="2018-03-16T22:06:59Z" finished-at="2018-03-16T22:07:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String)[pri:2, instance:com.apple.testcases.LoginPageTest@4590c9c3]" name="loginTest" duration-ms="684" started-at="2018-03-16T22:07:07Z" data-provider="UserCredentials" finished-at="2018-03-16T22:07:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User@1Apple]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.apple.testcases.LoginPageTest@4590c9c3]" name="tearDown" is-config="true" duration-ms="62" started-at="2018-03-16T22:07:08Z" finished-at="2018-03-16T22:07:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.apple.testcases.LoginPageTest@4590c9c3]" name="setUp" is-config="true" duration-ms="8657" started-at="2018-03-16T22:07:08Z" finished-at="2018-03-16T22:07:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String)[pri:2, instance:com.apple.testcases.LoginPageTest@4590c9c3]" name="loginTest" duration-ms="485" started-at="2018-03-16T22:07:17Z" data-provider="UserCredentials" finished-at="2018-03-16T22:07:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User@2Apple]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.apple.testcases.LoginPageTest@4590c9c3]" name="tearDown" is-config="true" duration-ms="61" started-at="2018-03-16T22:07:17Z" finished-at="2018-03-16T22:07:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.apple.testcases.LoginPageTest@4590c9c3]" name="setUp" is-config="true" duration-ms="9543" started-at="2018-03-16T22:07:17Z" finished-at="2018-03-16T22:07:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginTest(java.lang.String, java.lang.String)[pri:2, instance:com.apple.testcases.LoginPageTest@4590c9c3]" name="loginTest" duration-ms="456" started-at="2018-03-16T22:07:27Z" data-provider="UserCredentials" finished-at="2018-03-16T22:07:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User@3Apple]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password3]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.apple.testcases.LoginPageTest@4590c9c3]" name="tearDown" is-config="true" duration-ms="64" started-at="2018-03-16T22:07:27Z" finished-at="2018-03-16T22:07:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.apple.testcases.LoginPageTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
