@@ -5,25 +5,25 @@
       "browserName": "firefox",
       "marionette": true,
       "maxInstances": 5,
-	  "platform": "WINDOWS",
+	  "platform": "MAC",
       "seleniumProtocol": "WebDriver"
     },
     {
       "browserName": "chrome",
       "maxInstances": 5,
-	  "platform": "WINDOWS",
+	  "platform": "MAC",
       "seleniumProtocol": "WebDriver"
     },
     {
       "browserName": "internet explorer",
-      "platform": "WINDOWS",
+      "platform": "MAC",
       "maxInstances": 5,
       "seleniumProtocol": "WebDriver"
     },
     {
       "browserName": "safari",
       "technologyPreview": false,
-      "platform": "WINDOWS",
+      "platform": "MAC",
       "maxInstances": 5,
       "seleniumProtocol": "WebDriver"
     }

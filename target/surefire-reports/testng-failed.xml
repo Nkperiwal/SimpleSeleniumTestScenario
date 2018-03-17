@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="0" name="Failed suite [Command line suite]">
-  <test name="Command line test(failed)">
+<suite thread-count="3" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Apple Application Automation Test Sanity Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.apple.ExtentReportListener.ExtentReporterNG"/>
+  </listeners>
+  <test name="Grid Chrome Test for Apple Application(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.apple.testcases.LoginPageTest">
+      <class name="com.apple.testcases.LoginTestScenario">
         <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="loginPageTitleTest"/>
-          <include name="loginTest"/>
+          <include name="LoginTest" invocation-numbers="0 1"/>
+          <include name="init"/>
         </methods>
-      </class> <!-- com.apple.testcases.LoginPageTest -->
-      <class name="com.apple.testcases.HomePageTest">
-        <methods>
-          <include name="clickOnBagIconTest"/>
-          <include name="clickOnSignInLinkTest"/>
-          <include name="homePageTitleTest"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- com.apple.testcases.HomePageTest -->
+      </class> <!-- com.apple.testcases.LoginTestScenario -->
     </classes>
-  </test> <!-- Command line test(failed) -->
-</suite> <!-- Failed suite [Command line suite] -->
+  </test> <!-- Grid Chrome Test for Apple Application(failed) -->
+</suite> <!-- Failed suite [Apple Application Automation Test Sanity Suite] -->
