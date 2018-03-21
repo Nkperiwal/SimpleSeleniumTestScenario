@@ -65,6 +65,7 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 		System.out.println("Exception occured: " + error);
 		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 			String sImagePath =System.getProperty("user.dir") +"/FailedTestsScreenshots/" + dateName + ".png";
+			oBaseUtil.setoDriver(driver);
 			oBaseUtil.savePageSnapshot(sImagePath);
 		//	TestUtil.takeScreenshotAtEndOfTest();
 		
@@ -125,6 +126,16 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
 	public void afterChangeValueOf(WebElement element, WebDriver driver, CharSequence[] keysToSend) {
 		// TODO Auto-generated method stub
 
+	}
+
+	public void afterSwitchToWindow(String arg0, WebDriver arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void beforeSwitchToWindow(String arg0, WebDriver arg1) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

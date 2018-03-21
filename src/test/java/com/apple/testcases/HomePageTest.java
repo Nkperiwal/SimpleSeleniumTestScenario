@@ -1,5 +1,6 @@
 package com.apple.testcases;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -22,8 +23,8 @@ public class HomePageTest extends TestBase {
 	
 	@BeforeClass
 	public void setUp(){
-		initialize(browser);
-		oHomePage = new HomePage();
+		WebDriver driver = initialize();
+		oHomePage = new HomePage(driver);
 
 	}
 	

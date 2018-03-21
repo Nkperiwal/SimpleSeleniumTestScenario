@@ -1,10 +1,9 @@
 package com.apple.testcases;
 
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.apple.base.TestBase;
@@ -13,66 +12,59 @@ import com.apple.pages.LoginPage;
 import com.apple.util.DataProviderUtil;
 
 public class LoginTestScenario extends TestBase {
-	public static HomePage oHomePage;
-	public static LoginPage oLoginPage;
-	public static String sSheetName = "Credentials";
+	public  HomePage oHomePage;
+	public  LoginPage oLoginPage;
+	public  String sSheetName = "Credentials";
 	public String browserName;
-	
+	public WebDriver driver=null;
 	
 	public LoginTestScenario()
 	{
 		super();
 	}
 	
-	@BeforeClass
-	@Parameters({ "browser" })
-	public void init(String browserName) {
-	  this.browserName = browserName;
-	}
-	
-/*	@BeforeTest(alwaysRun=true)
+	/*@BeforeMethod(alwaysRun=true)
 	public void initiallization() {
-		initialize(browserName);
-		System.out.println("running");
+
+		//System.out.println("running");
+		driver = initialize();
 	}*/
+
 	
-	
-	@Test(priority=1,dataProvider="UserCredentials")
+	@Test(dataProvider="UserCredentials")
 	public void LoginTest(String sUserID, String sPassword){
-		
-		initialize(browserName);
-		oHomePage = new HomePage();
-		
+		driver = initialize();
+		System.out.println("after intialize the driver is : "+driver);
+		oHomePage = new HomePage(driver);
+		System.out.println(oHomePage.getHomePageTitle());
 		oBaseUtil.verifyTitle(oHomePage.getHomePageTitle(), "Apple");
 		
 		oHomePage.clickOnBagIcon();
-		
 		oLoginPage = oHomePage.clickOnSignInLink();
-		
+		oBaseUtil.waitForSeconds(5);
+		System.out.println(oLoginPage.getLoginPageTitle());
 		oBaseUtil.verifyTitle(oLoginPage.getLoginPageTitle(), "Sign in - Apple");
 		
 		oLoginPage.login(sUserID,sPassword);
-		
+		oBaseUtil.waitForSeconds(5);
 		System.out.println(oLoginPage.alertTextPresent());
 		
 		oBaseUtil.savePageSnapshot();
-		
 		oBaseUtil.closeBrowser();
-		
 		
 	}
 	
-/*	@AfterTest
+	/*@AfterMethod(alwaysRun=true)
 	public void tearDown() {
+		//System.out.println("closing");
 		oBaseUtil.closeBrowser();
-		System.out.println("closing");
-	}
-*/
+		
+	}*/
+
 	
 	
 	@DataProvider(parallel=true)
 	public Object[][] UserCredentials(){
-		
 		Object data[][] = DataProviderUtil.getSheetData(testDataFile,sSheetName);
 		return data;
 	}

@@ -5,6 +5,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -27,15 +28,16 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class BaseUtil extends ConfigProperties {
+public class BaseUtil {
 
-	public static WebDriver oDriver;
+	public WebDriver oDriver=null;
 	private long lngPageLoadTimeOut;
 	private long lngElementDetectionTimeOut;
 	String firstChildWindow;
 	String frame;
 	Actions myActions;
 	Action seriesOfActions;
+	DesiredCapabilities capability=null;
 
 	public BaseUtil() {
 		lngPageLoadTimeOut = 60L;
@@ -50,11 +52,11 @@ public class BaseUtil extends ConfigProperties {
 		this.lngElementDetectionTimeOut = lngElementDetectionTimeOut;
 	}
 
-	public void openBrowser(String sBrowserType, String sUrl) {
+	public WebDriver openBrowser(String sBrowserType, String sUrl) {
 		try {
 			oDriver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),
 					getBrowserCapabilities(sBrowserType));
-
+			System.out.println(oDriver);
 			if (sUrl.isEmpty()) {
 
 				sUrl = "about:blank";
@@ -66,17 +68,20 @@ public class BaseUtil extends ConfigProperties {
 			oDriver.manage().timeouts().pageLoadTimeout(lngPageLoadTimeOut, TimeUnit.SECONDS);
 
 			oDriver.manage().timeouts().implicitlyWait(lngElementDetectionTimeOut, TimeUnit.SECONDS);
-
+			Thread.sleep(2000);
 			oDriver.get(sUrl);
-
 			Thread.sleep(2000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return oDriver;
 	}
 
-	private static DesiredCapabilities getBrowserCapabilities(String browserType) {
-		DesiredCapabilities capability;
+	public void setoDriver(WebDriver oDriver2) {
+		this.oDriver = oDriver2;
+	}
+	private DesiredCapabilities getBrowserCapabilities(String browserType) {
+		
 		switch (getBrowserTypeIndexed(browserType)) {
 		case 1:
 			System.out.println("Opening firefox driver");
@@ -87,6 +92,7 @@ public class BaseUtil extends ConfigProperties {
 			System.out.println("Opening chrome driver");
 			capability = DesiredCapabilities.chrome();
 			capability.setPlatform(Platform.MAC);
+			capability.setCapability("chrome.switches", Arrays.asList("--enable-javascript"));
 			return capability;
 		case 2:
 			System.out.println("Opening IE driver");
@@ -128,7 +134,7 @@ public class BaseUtil extends ConfigProperties {
 	}
 
 	// ------------------------------------------------------------------
-	private static int getBrowserTypeIndexed(String sBrowserType) {
+	private int getBrowserTypeIndexed(String sBrowserType) {
 		sBrowserType = sBrowserType.toLowerCase().trim();
 
 		if (sBrowserType.isEmpty()) {
