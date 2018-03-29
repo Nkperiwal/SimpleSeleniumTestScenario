@@ -18,9 +18,11 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -92,6 +94,7 @@ public class BaseUtil {
 			System.out.println("Opening chrome driver");
 			capability = DesiredCapabilities.chrome();
 			capability.setPlatform(Platform.MAC);
+			capability.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 			capability.setCapability("chrome.switches", Arrays.asList("--enable-javascript"));
 			return capability;
 		case 2:
@@ -276,6 +279,19 @@ public class BaseUtil {
 		}
 	}
 
+	
+	// ---------------------------------------------------------------------
+
+		public void clickElement(By elementLocator) {
+			try {
+
+				oDriver.findElement(elementLocator).click();
+
+			} catch (Throwable t) {
+				t.printStackTrace();
+			}
+		}
+		
 	// ----------------------------------------------------------------------
 
 	public String getText(WebElement element) {
@@ -467,5 +483,15 @@ public class BaseUtil {
 
 	public void closeCurrentBrowser() {
 		oDriver.close();
+	}
+
+	public void setText(By elementLocator, String sText) {
+		try {
+
+			oDriver.findElement(elementLocator).sendKeys(sText);
+
+		} catch (Throwable t) {
+			t.printStackTrace();
+		}		
 	}
 }

@@ -1,27 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 183.862 sec <<< FAILURE! - in TestSuite
-LoginTest(com.apple.testcases.LoginTestScenario)  Time elapsed: 17.373 sec  <<< FAILURE!
-java.lang.AssertionError: Verification Failed expected [Apple] but found [Sign in - Apple]
-	at com.apple.testcases.LoginTestScenario.LoginTest(LoginTestScenario.java:40)
-
-LoginTest(com.apple.testcases.LoginTestScenario)  Time elapsed: 79.535 sec  <<< FAILURE!
-java.lang.AssertionError: Verification Failed expected [Sign in - Apple] but found [Bag - Apple]
-	at com.apple.testcases.LoginTestScenario.LoginTest(LoginTestScenario.java:46)
-
-LoginTest(com.apple.testcases.LoginTestScenario)  Time elapsed: 180.445 sec  <<< FAILURE!
-org.openqa.selenium.NoSuchWindowException: 
-no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=65.0.3325.162)
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 45.506 sec <<< FAILURE! - in TestSuite
+LoginTest(com.apple.testcases.AppleStep1Flow)  Time elapsed: 44.206 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='chapternav']/div/ul/li[3]/a/span[text()='MacBook Pro']"}
+  (Session info: chrome=65.0.3325.181)
   (Driver info: chromedriver=2.37.543654 (a46b62e9900f5ac48951f8ad68d9e03eded4cc8d),platform=Mac OS X 10.13.3 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
-Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
-System info: host: 'D1ML00123M.local', ip: '10.52.0.77', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.3', java.version: '1.8.0_161'
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'D1ML00123M.local', ip: '192.168.0.109', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.3', java.version: '1.8.0_161'
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.543654 (a46b62e9900f5a..., userDataDir: /var/folders/bd/jn8_1ljx235...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.162, webStorageEnabled: true, webdriver.remote.sessionid: 3975afd6f315d74afaac65ff64e...}
-Session ID: 3975afd6f315d74afaac65ff64e1c6dd
-*** Element info: {Using=xpath, value=//*[@id='login-appleId']}
-	at com.apple.testcases.LoginTestScenario.LoginTest(LoginTestScenario.java:48)
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.543654 (a46b62e9900f5a..., userDataDir: /var/folders/bd/jn8_1ljx235...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 65.0.3325.181, webStorageEnabled: true}
+Session ID: 64abd7d46a0d530cb42058d0f9ad766f
+*** Element info: {Using=xpath, value=//*[@id='chapternav']/div/ul/li[3]/a/span[text()='MacBook Pro']}
+	at com.apple.testcases.AppleStep1Flow.LoginTest(AppleStep1Flow.java:26)
 

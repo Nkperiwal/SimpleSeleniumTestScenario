@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Apple Application Automation Test Sanity Suite"
-	verbose="2" thread-count="3">
+	verbose="2" thread-count="1">
 	<listeners>
 		<listener class-name="com.apple.ExtentReportListener.ExtentReporterNG" />
 	</listeners>
@@ -16,7 +16,8 @@
 	<test name="Grid Chrome Test for Apple Application">
 		<!-- <parameter name="browser" value="chrome" /> -->
 		<classes>
-			<class name="com.apple.testcases.LoginTestScenario" />
+		<!--  	<class name="com.apple.testcases.LoginTestScenario" /> -->
+			<class name="com.apple.testcases.AppleStep1Flow" />
 		</classes>
 	</test>
 	<!-- <test name="Grid ie Test for Apple Application"> <parameter name="browser" 

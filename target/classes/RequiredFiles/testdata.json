@@ -1,0 +1,15 @@
+{
+	"ShippingAddress": {
+		"Details": [
+			{
+				"firstName": "Nandkishor",
+				"lastName": "Periwal",
+				"areaCode": "415",
+				"primaryPhoneNumber": "5146200",
+				"address1": "abc",
+				"address2": "abc",
+				"zipCode": "94123"
+			}
+		]
+	}
+}

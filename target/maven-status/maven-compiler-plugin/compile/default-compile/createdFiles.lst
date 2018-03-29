@@ -1,9 +1,0 @@
-com/apple/ExtentReportListener/ExtentReporterNG.class
-com/apple/util/WebEventListener.class
-com/apple/util/ExcelDriver.class
-com/apple/base/TestBase.class
-com/apple/util/ConfigProperties.class
-com/apple/util/BaseUtil.class
-com/apple/pages/HomePage.class
-com/apple/pages/LoginPage.class
-com/apple/util/DataProviderUtil.class
