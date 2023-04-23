@@ -1,0 +1,2 @@
+# SimpleSeleniumTestScenario
+TestNG + Maven + Grid
